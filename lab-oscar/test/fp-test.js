@@ -26,6 +26,10 @@ describe('should return a new Array', () => {
     let result = fp.filter([10, 2, 6, 29], n => n < 29);
     expect(result).toEqual([10, 2, 6]);
   });
+  it('should return null', () => {
+    let result = fp.filter(null, n => null);
+    expect(result).toEqual(null);
+  });
 });
 
 //testing reduce function
