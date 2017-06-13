@@ -48,7 +48,7 @@ describe('should a single value', () => {
 //testing concat function
 describe('it should return a single array', () => {
   it('should return a single array', () => {
-    let result = fp.concat([1, 2], [3, 4], (a, b) => a + b);
+    let result = fp.concat([1, 2], [3, 4], (a,b) => a + b);
     expect(result).toEqual([1, 2, 3, 4]);
   });
 });
