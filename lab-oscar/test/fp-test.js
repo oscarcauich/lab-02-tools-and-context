@@ -20,6 +20,14 @@ describe('should return an list array', () =>{
   });
 });
 
+//testing filter function
+describe('should return a new Array', () => {
+  it('should returna new Array', () => {
+    let result = fp.filter([10, 2, 6, 29], n => n < 29);
+    expect(result).toEqual([10, 2, 6]);
+  });
+});
+
 //testing reduce function
 describe('should a single value', () => {
   it('should return a single value', () => {

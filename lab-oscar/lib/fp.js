@@ -7,7 +7,7 @@ fp.map = (list, callback) => {
     return Array.prototype.map.call(list, callback);
   return null;
 };
-// fp.filter = (list, callback) => { return Array.prototype.re.apply(list, callback);};
+fp.filter = (list, callback) => { return Array.prototype.filter.call(list, callback);};
 fp.reduce = (list, callback) => {
   if(list !== null)
     return Array.prototype.reduce.apply(list, callback);
