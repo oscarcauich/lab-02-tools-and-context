@@ -8,6 +8,10 @@ fp.map = (list, callback) => {
   return null;
 };
 // fp.filter = (list, callback) => { return Array.prototype.re.apply(list, callback);};
-fp.reduce = (list, callback) => {return Array.prototype.reduce.apply(list, callback);};
+fp.reduce = (list, callback) => {
+  if(list !== null)
+    return Array.prototype.reduce.apply(list, callback);
+  return null;
+};
 fp.concat = () => {};
 fp.splice = () => {};

@@ -26,4 +26,9 @@ describe('should a single value', () => {
     let result = fp.reduce([1,2,3], [(start, next) => start + next]);
     expect(result).toEqual(6);
   });
+
+  it('should return null', () => {
+    let result = fp.reduce(null, [(start) => null]);
+    expect(result).toEqual(null);
+  });
 });
