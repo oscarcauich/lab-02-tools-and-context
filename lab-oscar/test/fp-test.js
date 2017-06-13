@@ -44,3 +44,11 @@ describe('should a single value', () => {
     expect(result).toEqual(null);
   });
 });
+
+//testing concat function
+describe('it should return a single array', () => {
+  it('should return a single array', () => {
+    let result = fp.concat([1, 2], [3, 4], (a, b) => a + b);
+    expect(result).toEqual([1, 2, 3, 4]);
+  });
+});
