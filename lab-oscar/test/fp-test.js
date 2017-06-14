@@ -64,7 +64,11 @@ describe('it should return a single array', () => {
 //testing splice function
 describe('it should add House to existing array', () =>{
   it('should add House to existing array', () => {
-    let result = fp.splice(['this','is','my'], (2,0,'house'));
-    expect(result).toEqual(['this','is','my','house']);
+    let result = fp.splice(['this','is','my'],2, 0);
+    expect(result).toEqual(['my']);
+  });
+  it('should return null', () => {
+    let result = fp.splice(null);
+    expect(result).toEqual(null);
   });
 });
