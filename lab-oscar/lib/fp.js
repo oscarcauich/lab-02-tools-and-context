@@ -18,5 +18,4 @@ fp.reduce = (list, callback) => {
   return null;
 };
 fp.concat = (arr1, arr2) => (arr1 !== null && arr2 !== null) ? Array.prototype.concat.call(arr1, arr2) : null;
-fp.splice = (list, arg) => { return Array.prototype.splice.call(list, arg);
-};
+fp.splice = (list, arg) => (list !== null)? Array.prototype.splice.call(list, arg): null;
