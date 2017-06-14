@@ -48,7 +48,23 @@ describe('should a single value', () => {
 //testing concat function
 describe('it should return a single array', () => {
   it('should return a single array', () => {
-    let result = fp.concat([1, 2], [3, 4], (a,b) => a + b);
+    let result = fp.concat([1, 2], [3, 4]);
     expect(result).toEqual([1, 2, 3, 4]);
+  });
+  it('should return a new array', () =>{
+    let result = fp.concat(['o','s','c','a','r'], ['c','a','u','i','c','h']);
+    expect(result).toEqual(['o','s','c','a','r','c','a','u','i','c','h']);
+  });
+  it('should return null', ()=> {
+    let result = fp.concat(null, 'hello');
+    expect(result).toEqual(null);
+  });
+});
+
+//testing splice function
+describe('it should add House to existing array', () =>{
+  it('should add House to existing array', () => {
+    let result = fp.splice(['this','is','my'], (2,0,'house'));
+    expect(result).toEqual(['this','is','my','house']);
   });
 });
